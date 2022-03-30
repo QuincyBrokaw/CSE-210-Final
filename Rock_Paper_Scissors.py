@@ -1,5 +1,6 @@
 import random
 
+
 class Game: 
     def __init__(self):
         self.rps = ["rock", "paper", "scissors", "spock", "lizard"]
@@ -9,6 +10,10 @@ class Game:
     def makeItRandom(self):
         self.rand = random.choice(self.rps)
     
+    def print(self):
+        print("The computer Choose ({})".format(self.rand))
+        
+        
     def letsCheck(self):
         if self.answer == self.rand:
             print("Its a Tie! Go again.")  
@@ -71,8 +76,13 @@ def main():
         print()
         g.makeItRandom()
         answer1 = input("Pick one: rock, paper, scissors, lizard, spock:  ")
+        print()
         g.answer = answer1
-        print(g.answer)
+        print()
+        print("You Choose ({})".format(g.answer))
+        print()
+        g.print()
+        print()
         g.letsCheck()
         
 
